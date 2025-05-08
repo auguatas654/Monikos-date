@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasimatymo kvietimas Monikai</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe6f0, #ffe6ff);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      color: #333;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    .buttons {
+      margin-top: 40px;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .yes {
+      background-color: #ff4da6;
+      color: white;
+    }
+    .no {
+      background-color: #ccc;
+      color: #333;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #response {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #4CAF50;
+    }
+    #photo {
+      margin-top: 20px;
+      display: none;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .decor {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .heart {
+      font-size: 3em;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+    .disco {
+      font-size: 3em;
+      animation: spin 4s linear infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="decor">
+    <div class="disco">🪩</div>
+    <div class="heart">❤️</div>
+  </div>
+  <h1>Monika, ar norėtum su manimi į pasimatymą?</h1>
+  <div class="buttons">
+    <button class="yes" onclick="showResponse('Taip! Lauksiu tavęs 05.16 💖', true)">Taip</button>
+    <button class="no" onclick="showResponse('Gal kitą kartą... 😢', false)">Ne</button>
+  </div>
+  <div id="response"></div>
+  <img id="photo" src="https://raw.githubusercontent.com/auguatas654/Monikos-date/main/IMG_20240518_191142.jpg" alt="Mano nuotrauka">
+  <script>
+    function showResponse(message, showImage) {
+      document.getElementById('response').innerText = message;
+      document.getElementById('photo').style.display = showImage ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
