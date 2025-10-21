@@ -41,6 +41,7 @@
       margin-top: 30px;
       font-size: 1.5em;
       color: #4CAF50;
+      min-height: 2em;
     }
     #photo, #sad-monkey {
       margin-top: 20px;
@@ -80,20 +81,9 @@
     <div class="disco">🪩</div>
     <div class="heart">❤️</div>
   </div>
+
   <h1>Monika, ar date 10.31?</h1>
+
   <div class="buttons">
     <button class="yes" onclick="showResponse('Taip! Lauksiu tavęs 10.31 💖', true)">Taip</button>
-    <button class="no" onclick="showResponse('Gal kitą kartą... 😢', false)">Ne</button>
-  </div>
-  <div id="response"></div>
-  <img id="photo" src="IMG_20240518_191142.jpg" alt="Mano nuotrauka">
-  <img id="sad-monkey" src="https://media.tenor.com/3bTxv0kFZfMAAAAC/monkey-dance.gif" alt="Sad Dancing Monkey">
-  <script>
-    function showResponse(message, showImage) {
-      document.getElementById('response').innerText = message;
-      document.getElementById('photo').style.display = showImage ? 'block' : 'none';
-      document.getElementById('sad-monkey').style.display = showImage ? 'none' : 'block';
-    }
-  </script>
-</body>
-</html>
+    <button class="no" onclick="showResponse('Gal kitą kartą... 😢', false)">Ne</
